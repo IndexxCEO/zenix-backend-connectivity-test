@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; connect-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="robots" content="noindex, nofollow">
+  <title>ZENIX — проверка backend</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script defer src="/static/app.js"></script>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">ZENIX / BACKEND CONNECTIVITY TEST</p>
+    <h1>Проверка связи с сервером ZENIX</h1>
+    <p>Проверяем, можно ли из вашей сети обратиться к настоящему Python/FastAPI-серверу и отправить ему тестовые данные. <strong>Никакие личные данные вводить не нужно.</strong></p>
+    <div class="intro">Откройте страницу без VPN. При первом открытии бесплатный сервер иногда запускается около минуты — это не обязательно блокировка.</div>
+    <button id="rerun" type="button" disabled>Повторить проверку</button>
+    <p id="summary" class="summary" role="status" aria-live="polite">Запуск диагностики…</p>
+    <section class="checks" aria-label="Результаты">
+      <article><div class="counter">01</div><h2>Ответ сервера (GET)</h2><p id="get-status">Ожидание…</p><small>Проверяем HTTPS и ответ от FastAPI.</small></article>
+      <article><div class="counter">02</div><h2>Отправка ответа (POST)</h2><p id="post-status">Ожидание…</p><small>Отправляем фиксированный тестовый маркер, без личных данных.</small></article>
+      <article><div class="counter">03</div><h2>Большой POST (32 КиБ)</h2><p id="large-status">Ожидание…</p><small>Проверяем передачу объёмного синтетического задания.</small></article>
+    </section>
+    <h2>Как сообщить результат</h2>
+    <p>Напишите отправителю ссылки, появились ли 3 зелёных результата. Укажите только город или регион, Wi-Fi или мобильную сеть, провайдера по желанию и был ли выключен VPN. Если сайт вообще не открылся, сообщите об этом. Имена, IP-адреса и учётные данные не нужны.</p>
+    <p class="note">Это тест отдельного сервера, а не готовой учебной платформы. Он не проверяет будущие авторизацию, SQLite и стабильность в других сетях. Приложение не хранит результаты; хостинг может автоматически вести технические журналы обращений.</p>
+  </main>
+</body>
+</html>
